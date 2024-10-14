@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+<form action="" method="post">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" required><br><br>
+
+    <label for="tag">Tag:</label>
+    <input type="text" name="tag" id="tag" required><br><br>
+
+    <label for="beskrivelse">Beskrivelse:</label>
+    <textarea name="beskrivelse" id="beskrivelse" rows="4" cols="50" required></textarea><br><br>
+    <button type="submit">Submit</button>
+
+</form>
+
+
+<div>
+    <% guides.forEach(function(guide) { %>
+        <div class="guide" id=<%= guide._id %>>
+            <h2><%= guide.title %></h2>
+            <p><%= guide.tag %></p>
+            <p><%= guide.beskrivelse %></p>
+        </div>
+    <% }); %>
+    
+</div>
+
+</body>
+</html> 
